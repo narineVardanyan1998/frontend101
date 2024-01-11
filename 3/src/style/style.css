@@ -1,0 +1,446 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'DM Serif Display', serif;
+  font-family: 'Lemon', serif;
+  font-family: 'Poppins', sans-serif;
+
+}
+body{
+  width: 1220px;
+  height: auto;
+  margin: 0 auto;
+  background: url(https://www.pixground.com/wp-content/uploads/2023/08/Japanese-Cherry-Blossom-Landscape-AI-Generated-4K-Wallpaper-1-jpg.webp)no-repeat;
+  background-size: 100% 100%;
+  
+}
+header{
+  margin-top: 35px;
+}
+.container{
+  margin: 0 auto;
+}
+.row{
+  display:flex;
+}
+.justify-between{
+  justify-content:space-between ;
+}
+ul{
+  list-style: none;
+  gap: 30px;
+ 
+}
+
+.logo{
+  font-size: 21px;
+  color:  #f1c70b ;
+}
+.row a{
+  color:black;
+  text-decoration: none;
+  
+}
+a:hover{
+  color:black;
+}
+.button_wrapper{
+  display: flex;
+  gap: 20px;
+}
+.btn_primary{
+  padding: 10px;
+  padding-bottom: 10px;
+  width: 120px;
+  height: 40px;
+  background-color: rgb(213, 30, 20);
+  color:white;
+  border-radius: 15px;
+ border: none;
+}
+.btn_secondary{
+    padding: 10px;
+    padding-bottom: 10px;
+    width: 120px;
+    height: 40px;
+   
+    color:rgb(7, 6, 6);
+    border-radius: 15px;
+   border: none; 
+}
+
+h1{
+  text-align: center;
+  font-size: 3em;
+  font-weight: 900;
+  margin: 20px 10px 40px 10px;
+  color: black;
+}
+
+.card1{
+  width: 300px;
+  border: 1px solid #F96167;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card1 img{
+width: 100%;
+height: auto;
+}
+.card-content1{
+padding: 15px;
+}
+.card1 h3 {
+  margin-top: 0;
+  color:white ;
+}
+.card1 p{
+  color:#666;
+}
+.btn-card1{
+    padding: 10px;
+    padding-bottom: 10px;
+    width: 120px;
+    height: 40px;
+    background-color:white;
+    color:black;
+    border-radius: 15px;
+    border: none; 
+}
+
+.card2{
+  width: 300px;
+  border: 1px solid #F96167;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card2 img{
+width: 100%;
+height: auto;
+}
+.card-content2{
+padding: 15px;
+}
+.card-content2 h3 {
+  margin-top: 0;
+  color:white;
+}
+.card2 p{
+  color:#666;
+}
+.btn-card2{
+    padding: 10px;
+    padding-bottom: 10px;
+    width: 120px;
+    height: 40px;
+    background-color:white;
+    color:black;
+    border-radius: 15px;
+    border: none; 
+}
+
+.card3{
+  width: 300px;
+  border: 1px solid #F96167;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card3 img{
+width: 100%;
+height: auto;
+}
+.card-content3{
+padding: 15px;
+}
+.card-content3 h3 {
+  margin-top: 0;
+  color:white;
+}
+.card3 p{
+  color:#666;
+}
+.btn-card3{
+    padding: 10px;
+    padding-bottom: 10px;
+    width: 120px;
+    height: 40px;
+    background-color:white;
+    color:black;
+    border-radius: 15px;
+    border: none; 
+}
+
+.card4{
+  width: 300px;
+  border: 1px solid #F96167;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card4 img{
+width: 100%;
+height: auto;
+}
+.card-content4{
+padding: 15px;
+}
+.card-content4 h3 {
+  margin-top: 0;
+  color:white;
+}
+.card4 p{
+  color:#666;
+}
+.btn-card4{
+    padding: 10px;
+    padding-bottom: 10px;
+    width: 120px;
+    height: 40px;
+    background-color:white ;
+    color:black;
+    border-radius: 15px;
+    border: none; 
+}
+
+
+.card5{
+  width: 300px;
+  border: 1px solid #F96167;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card5 img{
+width: 100%;
+height: auto;
+}
+.card-content5{
+padding: 15px;
+}
+.card-content5 h3 {
+  margin-top: 0;
+  color:white;
+}
+.card5 p{
+  color:#666;
+}
+.btn-card5{
+    padding: 10px;
+    padding-bottom: 10px;
+    width: 120px;
+    height: 40px;
+    background-color:white;
+    color:black;
+    border-radius: 15px;
+    border: none; 
+}
+
+.card6{
+  width: 300px;
+  border: 1px solid #F96167;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card6 img{
+width: 100%;
+height: auto;
+}
+.card-content6{
+padding: 15px;
+}
+.card-content6 h3 {
+  margin-top: 0;
+  color:white;
+}
+.card6 p{
+  color:#666;
+}
+.btn-card6{
+    padding: 10px;
+    padding-bottom: 10px;
+    width: 120px;
+    height: 40px;
+    background-color:white;
+    color:black;
+    border-radius: 15px;
+    border: none; 
+}
+
+
+
+.card7{
+  width: 300px;
+  border: 1px solid #F96167;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card7 img{
+width: 100%;
+height: auto;
+}
+.card-content7{
+padding: 15px;
+}
+.card-content7 h3 {
+  margin-top: 0;
+  color:white;
+}
+.card7 p{
+  color:#666;
+}
+.btn-card7{
+    padding: 10px;
+    padding-bottom: 10px;
+    width: 120px;
+    height: 40px;
+    background-color:white;
+    color:black;
+    border-radius: 15px;
+    border: none; 
+    
+}
+
+
+
+.card8{
+  width: 300px;
+  border: 1px solid #F96167;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card8 img{
+width: 100%;
+height: auto;
+}
+.card-content8{
+padding: 15px;
+}
+.card-content8 h3 {
+  margin-top: 0;
+  color:white ;
+}
+.card8 p{
+  color:#666;
+}
+.btn-card8{
+  
+    padding: 10px;
+    padding-bottom: 10px;
+    width: 120px;
+    height: 40px;
+    background-color:white;
+    color:black;
+    border-radius: 15px;
+    border: none; 
+    
+    
+}
+
+
+
+
+.card9{
+  width: 300px;
+  border: 1px solid #F96167;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.card9 img{
+width: 100%;
+height: auto;
+}
+.card-content9{
+padding: 15px;
+}
+.card-content9 h3 {
+  margin-top: 0;
+  color:white;
+}
+.card9 p{
+  color:#666;
+}
+.btn-card9{
+    padding: 10px;
+    padding-bottom: 10px;
+    width: 120px;
+    height: 40px;
+    background-color:white;
+    color:black;
+    border-radius: 15px;
+    border: none; 
+}
+.card_container{
+display: flex;
+justify-content: space-between;
+}
+.card_container2{
+  display: flex;
+  justify-content: space-between;
+  }
+  
+  .card_container3{
+    display: flex;
+    justify-content: space-between;
+    }
+    
+span{
+  color: rgb(4, 4, 66);
+  font-weight: 900;
+}
+footer {
+  margin-top: 35px;
+  margin-bottom: 25px;
+  text-align: center;
+  padding: 20px;
+ 
+}
+
+
+footer p {
+  margin: 0; 
+ font-weight: 700;
+}
+
+
+footer address {
+ font-weight: 700;
+}
+
+
+footer a {
+  color:black;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 700;
+}
+
+footer a:hover {
+  text-decoration: underline;
+ 
+}
+.footer{
+  background-color: #F96167;
+  color:black;
+  border: none;
+  border-radius: 25px;
+}
+
+@media screen and (max-width: 600px) {
+ 
+}
