@@ -11,7 +11,7 @@ body{
   height: auto;
   margin: 0 auto;
   background: url(https://www.pixground.com/wp-content/uploads/2023/08/Japanese-Cherry-Blossom-Landscape-AI-Generated-4K-Wallpaper-1-jpg.webp)no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   
 }
 header{
@@ -56,7 +56,7 @@ a:hover{
   background-color: rgb(213, 30, 20);
   color:white;
   border-radius: 15px;
- border: none;
+  border: none;
 }
 .btn_secondary{
     padding: 10px;
@@ -394,7 +394,7 @@ justify-content: space-between;
   justify-content: space-between;
   }
   
-  .card_container3{
+.card_container3{
     display: flex;
     justify-content: space-between;
     }
