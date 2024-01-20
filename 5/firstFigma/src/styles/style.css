@@ -9,3 +9,6 @@ body{
     cursor: url("./../img/mouseSecondary.svg"), auto;
     
 }
+@media screen and (max-width: 600px) {
+ 
+}
