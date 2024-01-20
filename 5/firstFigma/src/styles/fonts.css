@@ -1,0 +1,112 @@
+@font-face {
+  font-family: "neueBold";
+  src: url("./fonts/tt_firs_neue/TT\ Firs\ Neue\ Trial\ Medium.ttf");
+}
+@font-face {
+  font-family: "neueRegular";
+  src: url("./fonts/tt_firs_neue/TT\ Firs\ Neue\ Trial\ Regular.ttf");
+}
+@font-face {
+  font-family: "neueThin";
+  src: url("./fonts/tt_firs_neue/TT\ Firs\ Neue\ Trial\ Thin.ttf");
+}
+
+.font-24{
+  font-size: 24px;
+}
+.font-18{
+  font-size: 18px;
+}
+.font-64{
+  font-size: 64px;
+}
+.font-96{
+  font-size: 96px;
+}
+.text-center{
+  text-align: center;
+}
+.light{
+  font-weight: 100;
+}
+.bold{
+  font-weight: bold;
+}
+.neueBold{
+  font-family: "neueBold";
+}
+.neueRegular{
+  font-family: "neueRegular";
+}
+.neueThin{
+  font-family: "neueThin";
+}
+.font_18{
+  font-family: "neueThin";
+  font-style: normal;
+  font-weight: 300;
+}
+.font-64{
+  font-family: "neueThin";
+  font-style: normal;
+  font-weight: 265;
+}
+.span-size64{
+font-family:  "neueThin";
+font-size: 64px;
+font-style: normal;
+font-weight: 500;
+}
+.font-36{
+  color: #000;
+  font-family:  "neueThin";
+  font-size: 36px;
+  
+}
+.font-w265{
+  font-weight: 265;
+  font-size: 24px;
+  font-family:  "neueThin";
+}
+.one-nike{
+  font-size: 64px;
+}
+.holke-text{
+  font-size: 64px;
+}
+.falsa-64{
+  font-size: 64px;
+}
+.span-red{
+  font-family: "TT Firs Neue";
+  font-size: 48px;
+}
+.font-list48{
+  font-family: "TT Firs Neue";
+  font-size: 48px;
+}
+.font-265{
+  font-family: "TT Firs Neue";
+  font-size: 64px;
+}
+.design{
+  font-size: 64px;
+}
+.footer-copyright{
+  font-family: "TT Firs Neue";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+}
+.heard{
+font-family: "TT Firs Neue";
+font-size: 18px;
+font-style: normal;
+font-weight: 300;
+}
+.link{
+font-family: "TT Firs Neue";
+font-size: 18px;
+font-style: normal;
+font-weight: 300;
+}
