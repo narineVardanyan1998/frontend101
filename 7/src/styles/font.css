@@ -1,0 +1,115 @@
+.logo-text{
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+
+}
+nav ul li a {
+ font-size: 16px;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+}
+  .btn-two-text{
+font-family: "Open Sans";
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+
+}
+.block h1{
+ font-family: "Playfair Display";
+ font-size: 86px;
+ font-style: normal;
+ font-weight: 700;
+ }
+ .block p{
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400; 
+  }
+
+.container-section h1{
+  font-family: "Playfair Display";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  }
+
+  .container-section p{
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+   }
+
+.btn-span{
+ color:  #2F2E41;
+ font-family: "Open Sans";
+ font-size: 18px;
+ font-style: normal;
+ font-weight: 600; 
+ }
+ .display-flex1 p{
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  }
+  .display-flex1 h1{
+  
+    font-family: "Open Sans";
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+  
+    }
+    .display-flex1 h1{
+     font-family: "Open Sans";
+     font-size: 50px;
+     font-style: normal;
+    font-weight: 700;
+   }
+
+   .display-flex2 h6{
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+  
+   }
+   .display-flex2 h1{
+  font-family: "Open Sans";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+ 
+   }
+   .display-flex2 p{
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  
+   }
+   .display-flex3 p{
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+
+  }
+  
+.display-flex3 h1{
+  font-family: "Open Sans";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+   }
+   .container-block h1{
+    font-family: "Playfair Display";
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+     }
