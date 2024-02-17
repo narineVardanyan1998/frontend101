@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details</title>
+</head>
+<body>
+    <div id="movie-details-container">
+        <img id="movie-poster" alt="Movie Poster">
+        <p id="movie-overview"></p>
+    </div>
+    <!-- Add this to your moviedetails.html -->
+<div class="seat-selection-container">
+  <h2>Select Your Seat</h2>
+  <div class="seat-container">
+    <!-- Add seats dynamically using JavaScript -->
+  </div>
+  <p>Total Price: <span id="totalPrice">0</span> USD</p>
+  <button id="bookButton">Book Now</button>
+</div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('message', (event) => {
+    if (event.data && event.data.type === 'movieDetails') {
+      const moviePoster = document.getElementById('movie-poster');
+      const movieOverview = document.getElementById('movie-overview');
+
+      if (moviePoster && movieOverview) {
+        moviePoster.src = event.data.data.posterPath;
+        movieOverview.innerText = event.data.data.overview;
+      } else {
+        console.error('Elements not found in movie-details.html.');
+      }
+    }
+  });
+
+  // Notify the parent window that the movie details page is ready
+  window.parent.postMessage({ type: 'movieDetailsPageReady' }, '*');
+});
+
+    </script>
+  </body>
+</html>

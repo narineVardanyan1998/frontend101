@@ -147,6 +147,7 @@ button{
 i{
   visibility: hidden;
 }
+
 @media (max-width:800px){
   body{
     background-color: rgb(8,2,36);
