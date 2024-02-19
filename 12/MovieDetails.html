@@ -4,24 +4,113 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styleDetails.css">
     <title>Movie Details</title>
 </head>
 <body>
     <div id="movie-details-container">
-        <img id="movie-poster" alt="Movie Poster">
+        <img id="movie-poster" alt="Movie Poster"  width="50%">
         <p id="movie-overview"></p>
     </div>
-    <!-- Add this to your moviedetails.html -->
-<div class="seat-selection-container">
-  <h2>Select Your Seat</h2>
-  <div class="seat-container">
-    <!-- Add seats dynamically using JavaScript -->
+    
+
+  <div class="seat-selection-container">
+    <h2>Select Your Seat</h2>
+    <div class="seat-container">
+    </div>
+    <p>Total cost: <span id="totalPrice">0</span> USD</p>
+    <button id="bookButton">Book Now</button>
   </div>
-  <p>Total Price: <span id="totalPrice">0</span> USD</p>
-  <button id="bookButton">Book Now</button>
-</div>
+
 
     <script>
+   document.addEventListener('DOMContentLoaded', function () {
+     const seatContainer = document.querySelector('.seat-container');
+     const totalPriceElement = document.getElementById('totalPrice');
+     const bookButton = document.getElementById('bookButton');
+     let lastClickedSeat = null;
+     
+   const cinemaHall = {
+    totalSeats: 50, 
+    bookedSeats: [], 
+    seatPrices: {
+      standard: 10, 
+      vip: 20, 
+    },
+  };
+
+  function generateSeats() {
+    seatContainer.innerHTML = ''; 
+
+    for (let i = 1; i <= cinemaHall.totalSeats; i++) {
+      const seatElement = document.createElement('div');
+      seatElement.classList.add('seat', 'seat-free');
+      seatElement.setAttribute('data-seat', i);
+
+      if (cinemaHall.bookedSeats.includes(i)) {
+        seatElement.classList.add('seat-booked');
+      }
+      
+      const seatNumber = document.createElement('span');
+      seatNumber.textContent = i;
+      
+        seatElement.appendChild(seatNumber);
+
+      seatElement.addEventListener('click', handleSeatClick);
+      seatContainer.appendChild(seatElement);
+    }
+
+    updateTotalPrice();
+  }
+
+  function handleSeatClick(event) {
+    const clickedSeat = parseInt(event.target.getAttribute('data-seat'));
+
+    if (event.detail === 1) {
+      if (!cinemaHall.bookedSeats.includes(clickedSeat)) {
+        cinemaHall.bookedSeats.push(clickedSeat);
+      } else {
+        const index = cinemaHall.bookedSeats.indexOf(clickedSeat);
+        cinemaHall.bookedSeats.splice(index, 1);
+      }
+    } else if (event.detail === 2) {
+      if (lastClickedSeat !== null) {
+        const index = cinemaHall.bookedSeats.indexOf(lastClickedSeat);
+        if (index !== -1) {
+          cinemaHall.bookedSeats.splice(index, 1);
+        }
+      }
+    }
+
+    lastClickedSeat = clickedSeat;
+    generateSeats();
+  }
+
+  function updateTotalPrice() {
+    const ticketPrice = cinemaHall.seatPrices.standard; 
+    const totalPrice = cinemaHall.bookedSeats.length * ticketPrice;
+    totalPriceElement.textContent = totalPrice;
+  }
+
+  function bookSeats() {
+  
+    if (cinemaHall.bookedSeats.length === 0) {
+      alert('Please select at least one seat before booking.');
+      return;
+    }
+
+    alert('Places successfully booked:', cinemaHall.bookedSeats);
+  }
+
+ 
+  bookButton.addEventListener('click', bookSeats);
+
+  
+  generateSeats();
+});
+
+
+
       document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('message', (event) => {
     if (event.data && event.data.type === 'movieDetails') {
@@ -35,9 +124,12 @@
         console.error('Elements not found in movie-details.html.');
       }
     }
+
+
+    
   });
 
-  // Notify the parent window that the movie details page is ready
+
   window.parent.postMessage({ type: 'movieDetailsPageReady' }, '*');
 });
 

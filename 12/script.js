@@ -8,10 +8,10 @@ toggle.addEventListener('click', () => {
 
 const token = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5Y2M0YjA1ZjliODhiOWFmZGI3MmNjYTMwNjE0OGVmNCIsInN1YiI6IjY1Y2I0YjFkYTM0OTExMDE2NDdjZGQ4YyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Gu3WJqa0cpM06RJV3uvvgYl0a9GnB4_IVfBlIsceSSs';
 
-// URL for the authentication endpoint
-const url = 'https://api.themoviedb.org/3/discover/movie';
 
-// Headers
+const url = 'https://api.themoviedb.org/3/discover/movie';
+ 
+
 const headers = {
   'Authorization': 'Bearer ' + token,
   'Accept': 'application/json'
@@ -28,7 +28,6 @@ function showNextPage() {
   showMovies(currentPage);
 }
 
-// Event listener for the "Show More" button
 showMoreButton.addEventListener('click', showNextPage);
  
 function showMovies(page) {
@@ -75,7 +74,7 @@ function openMovieDetailsPage(movieDetails) {
   const detailsUrl = `moviedetails.html?id=${movieDetails.id}`;
   const newTab = window.open(detailsUrl, '_blank');
 
-  // Wait for the new tab to initialize before sending the message
+
   setTimeout(() => {
     if (newTab) {
       newTab.postMessage({
@@ -88,78 +87,75 @@ function openMovieDetailsPage(movieDetails) {
     } else {
       console.error('Failed to open the new tab.');
     }
-  }, 1000); // Adjust the delay as needed
+  }, 1000);
 }
-// Generate seats dynamically
+
+
   const seatContainer = document.querySelector('.seat-container');
   const totalPriceElement = document.getElementById('totalPrice');
   const bookButton = document.getElementById('bookButton');
 
-  // Assume you have seat information (rows and columns) from the server
-  const rows = 1; // Change this based on your venue
-  const columns = 1; // Change this based on your venue
+   
+  const rows = 10; 
+  const columns = 10; 
 
-  // Function to generate seats dynamically
+
   function generateSeats() {
-    for (let i = 1; i <= rows; i++) {
-      const rowElement = document.createElement('div');
-      rowElement.classList.add('row');
+     for (let i = 1; i <= rows; i++) {
+       const rowElement = document.createElement('div');
+       rowElement.classList.add('row');
 
-      for (let j = 1; j <= columns; j++) {
+       for (let j = 1; j <= columns; j++) {
         const seatElement = document.createElement('div');
         seatElement.classList.add('seat', 'seat-free');
         seatElement.setAttribute('data-row', i);
-        seatElement.setAttribute('data-column', j);
+         seatElement.setAttribute('data-column', j);
 
-        seatElement.addEventListener('click', handleSeatClick);
+         seatElement.addEventListener('click', handleSeatClick);
 
-        rowElement.appendChild(seatElement);
+         rowElement.appendChild(seatElement);
+       }
+
+      seatContainer.appendChild(rowElement);   
       }
+   }
 
-      seatContainer.appendChild(rowElement);
-    }
-  }
-
-  function handleSeatClick(event) {
+    function handleSeatClick(event) {
     const selectedSeat = event.target;
 
-    if (selectedSeat.classList.contains('seat-free')) {
-      selectedSeat.classList.remove('seat-free');
+     if (selectedSeat.classList.contains('seat-free')) {
+       selectedSeat.classList.remove('seat-free');
       selectedSeat.classList.add('seat-selected');
     } else {
-      selectedSeat.classList.remove('seat-selected');
+       selectedSeat.classList.remove('seat-selected');
       selectedSeat.classList.add('seat-free');
     }
 
-    updateTotalPrice();
-  }
+     updateTotalPrice();
+   }
 
-  function updateTotalPrice() {
-    const selectedSeats = document.querySelectorAll('.seat-selected');
-    const ticketPrice = 10; // Set your base ticket price
+     function updateTotalPrice() {
+     const selectedSeats = document.querySelectorAll('.seat-selected');
+     const ticketPrice = 10;
 
-    const totalPrice = selectedSeats.length * ticketPrice;
-    totalPriceElement.textContent = totalPrice;
-  }
-
-  // Function to book seats
-  function bookSeats() {
-    // Implement the logic to send the booked seat information to the server
-    // You may use an API endpoint to handle the booking
-    // Update the server with the selected seats and other relevant details
-    // Display a success message or handle errors accordingly
-    console.log('Seats booked successfully!');
-  }
-
-  // Add event listener for the book button
-  bookButton.addEventListener('click', bookSeats);
-
-  // Initialize seat selection
-  generateSeats();
+     const totalPrice = selectedSeats.length * ticketPrice;
+     totalPriceElement.textContent = totalPrice;
+   }
 
 
-// Add event listener for the book button
-bookButton.addEventListener('click', bookSeats);
+   function bookSeats() {
+
+     console.log('Seats booked successfully!');
+   }
+
+
+   bookButton.addEventListener('click', bookSeats);
+
+
+   generateSeats();
+
+
+ bookButton.addEventListener('click', bookSeats);
 
 function showMovieDetails(movieId) {
   fetch(`https://api.themoviedb.org/3/movie/${movieId}`, {

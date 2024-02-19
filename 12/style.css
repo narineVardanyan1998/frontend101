@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   text-align: center;
+ 
 }
 body{
   flex-direction: column;
@@ -214,3 +215,4 @@ i{
     background: black;
   }
 }
+
