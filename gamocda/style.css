@@ -1,0 +1,142 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: rgb(131,58,180);
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  width: 100%;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  margin: 10px;
+}
+.logo{
+  color: rgba(253,29,29,1);
+}
+.navbanner-list{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.navbanner-list li a{
+  color:#fff;
+  text-decoration: none;
+}
+.navbanner-list li {
+  margin: 0;
+}
+.navbanner-list  a{
+  text-decoration: none;
+  color: black; 
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.navbanner-list a:hover{
+color: rgb(21, 21, 225); 
+}
+section {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-banner {
+  text-align: center;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+  animation: pulse 1s infinite;
+ }
+
+ 
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+
+  #slider-container #slider .slide {
+    width: calc(2.5% - 20px);
+  }
+
+}
+
+@media only screen and (max-width: 1100px) {
+
+  #slider-container #slider .slide {
+    width: calc(3.3333333% - 20px);
+  }
+
+}
+
+@media only screen and (max-width: 900px) {
+
+  #slider-container #slider .slide {
+    width: calc(5% - 20px);
+  }
+
+}
+
+@media only screen and (max-width: 550px) {
+
+  #slider-container #slider .slide {
+    width: calc(10% - 20px);
+  }
+
+}
+footer {
+  text-align: center;
+  padding: 1em 0;
+  background-color: #333;
+  color: white;
+}
+@media screen and (max-width: 600px) {
+  body{
+   width: 600px;
+  }
+  .product-image {
+    width: 100%;
+    height: auto;
+  }
+  header {
+    padding: 0.5em 0;
+  }
+
+  .navbanner-list {
+    flex-direction: column;
+  }
+
+  .navbanner-list a {
+    padding: 8px;
+  }
+}
